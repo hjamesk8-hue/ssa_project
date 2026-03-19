@@ -38,11 +38,11 @@
 </script>
 
 <!-- reCAPTCHA v3 (keep your working site key here) -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LeMRm4qAAAAADD-PhyZEaZz2nWI4DMYqeYw43uP"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcXvo8sAAAAAE6EwOYVNe2xoygtBJSRbq9_kjkd"></script>
 <script>
 function executeRecaptcha() {
   grecaptcha.ready(function() {
-    grecaptcha.execute('6LeMRm4qAAAAADD-PhyZEaZz2nWI4DMYqeYw43uP', { action: 'login' })
+    grecaptcha.execute('6LcXvo8sAAAAAE6EwOYVNe2xoygtBJSRbq9_kjkd', { action: 'login' })
       .then(function(token) {
         document.getElementById('recaptcha-token').value = token;
         document.getElementById('login-form').submit(); // submit after token set

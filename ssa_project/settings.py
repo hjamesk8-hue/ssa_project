@@ -6,7 +6,7 @@ WEB3FORMS_ACCESS_KEY = "a3912a13-7eda-4b6e-88bd-d1b6c75a206e"
 SECRET_KEY = 'django-insecure-skz(uf^snv+u%u@2+9mtud&-v2+z&z5_*f)*%!@7(ornlge40w'
 DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-RECAPTCHA_SECRET_KEY = "6LeMRm4qAAAAAPslEmmSL7zQBpwLV-YHw0R99ytB"
+RECAPTCHA_SECRET_KEY = "6LcXvo8sAAAAAEDXrcir9xNN-eTRcuujdYigLbJw"
 INSTALLED_APPS = [
     'users',
     'chipin',

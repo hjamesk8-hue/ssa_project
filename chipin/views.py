@@ -11,6 +11,7 @@ from django.urls import reverse
 @login_required
 def home(request):
     user = request.user
+    profile = request.user.profile
     pending_invitations = user.pending_invitations.all() # Get pending group invitations for the current user
     user_groups = user.group_memberships.all()  # Get groups the user is a member of
     user_join_requests = GroupJoinRequest.objects.filter(user=user)  # Get join requests sent by the user
@@ -19,7 +20,8 @@ def home(request):
         'pending_invitations': pending_invitations,
         'user_groups': user_groups,
         'user_join_requests': user_join_requests,
-        'available_groups': available_groups
+        'available_groups': available_groups,
+        'balance': profile.balance
     }
     return render(request, 'chipin/home.html', context)
 

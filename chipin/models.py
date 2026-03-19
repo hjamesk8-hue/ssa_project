@@ -81,3 +81,5 @@ class Event(models.Model):
                 return False
         self.status = self.Status.ACTIVE
         return True
+    
+
