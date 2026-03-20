@@ -98,6 +98,15 @@
                 <!-- Only display the "Delete Event" link if the user is the group admin -->
                 {% if request.user == group.admin %}
                     <a href="{% url 'chipin:delete_event' group.id event.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this event?');">Delete Event</a>
+                    
+                    {% if info.status == 'Active' %}
+                      <form action="{% url 'chipin:transfer_funds' group.id event.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success" onclick="return confirm('Transfer funds for this event? This action is irreversible.');">
+                          Transfer Funds
+                        </button>
+                      </form>
+                    {% endif %}
                 {% endif %}
             </li>
         {% endfor %}
